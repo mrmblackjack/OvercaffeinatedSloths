@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stack_style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+function myFunction() {
+    var btn = document.createElement("SPAN");
+    var t = document.createTextNode("hi");
+    btn.appendChild(t);
+    btn.className+="square";
+    document.body.appendChild(btn);
+}
+</script>
+<script type="text/javascript">
+function del(){
+    $("div").remove(".square");
+}
+</script>
+</head>
+<body>
+
+<h2>Stack CSS</h2>
+
+<button class="button" onclick="myFunction()">ADD</button>
+<button class="button" onclick="del()">REMOVE</button>
+<!--<input type="button" class="button" value="Input Button">-->
+<div class="squareContainer"> 
+<span class="square"></span>
+</div>
+
+</body>
+</html> 
