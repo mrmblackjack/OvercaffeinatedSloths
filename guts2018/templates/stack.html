@@ -6,17 +6,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script type="text/javascript">
+var id=1;
 function myFunction() {
     var btn = document.createElement("SPAN");
     var t = document.createTextNode("hi");
     btn.appendChild(t);
     btn.className+="square";
+    btn.id+=id;
+    id++;
     document.body.appendChild(btn);
 }
 </script>
 <script type="text/javascript">
 function del(){
-    $("div").remove(".square");
+    console.log("pls help");
+    console.log(id-1);
+    $('#'+(id-1)).remove();
+    id--;
 }
 </script>
 </head>
@@ -28,7 +34,7 @@ function del(){
 <button class="button" onclick="del()">REMOVE</button>
 <!--<input type="button" class="button" value="Input Button">-->
 <div class="squareContainer"> 
-<span class="square"></span>
+<!--<span class="square" id=0></span>-->
 </div>
 
 </body>
